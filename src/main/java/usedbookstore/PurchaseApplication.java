@@ -14,5 +14,6 @@ public class PurchaseApplication {
     protected static ApplicationContext applicationContext;
     public static void main(String[] args) {
         applicationContext = SpringApplication.run(PurchaseApplication.class, args);
+
     }
 }
