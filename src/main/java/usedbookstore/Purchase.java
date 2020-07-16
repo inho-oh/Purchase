@@ -2,6 +2,7 @@ package usedbookstore;
 
 import javax.persistence.*;
 import org.springframework.beans.BeanUtils;
+import usedbookstore.external.Delivery;
 
 import java.util.Date;
 import java.util.List;
@@ -38,8 +39,8 @@ public class Purchase {
         // it is NOT A GOOD PRACTICE. instead, Event-Policy mapping is recommended.
 
         usedbookstore.external.Delivery delivery = new usedbookstore.external.Delivery();
-        //delivery = PurchaseApplication.applicationContext.getBean(usedbookstore.external.DeliveryService.class)
-//                .read(purchaseCanceled.getId());
+     //   delivery = PurchaseApplication.applicationContext.getBean(usedbookstore.external.DeliveryService.class)
+    //            .read(purchaseCanceled.getId(), delivery);
         //delivery.setId(purchaseCanceled.getId());
         delivery.setStatus("배송취소");
         delivery.setPurchaseid(purchaseCanceled.getId());
